@@ -15,14 +15,14 @@ For users: `http://localhost:5618/api/users`
 For feedback: `http://localhost:5618/api/feedbacks`  
 For comments: `http://localhost:5618/api/comments`  
 
-## Endpoints
-### 1. Managing Users
-**View all users**
-HTTP Method: `GET`
-Endpoint: `/api/users`
-Result: Retrieves all users in the database
-Responses:
-**200 OK:** List of users returned successfully.
+## Endpoints  
+### 1. Managing Users  
+**View all users**  
+HTTP Method: `GET`  
+Endpoint: `/api/users`  
+Result: Retrieves all users in the database  
+Responses:  
+**200 OK:** List of users returned successfully.  
 
 ```HTTP/1.1 200 
 Content-Type: application/json
@@ -57,15 +57,15 @@ Response file saved.
 Response code: 200; Time: 7ms (7 ms); Content length: 173 bytes (173 B)
 ```
 ---
-**View a single user**
-HTTP Method: `GET`
-Endpoint: `/api/users/{id}`
-Result: Retrieve a single user by their ID.
-Path Parameters:
--   `id` (long): User ID
+**View a single user**  
+HTTP Method: `GET`  
+Endpoint: `/api/users/{id}`  
+Result: Retrieve a single user by their ID.  
+Path Parameters:  
+-   `id` (long): User ID  
 
-Responses:
-**200 OK:** Single user returned successfully
+Responses:  
+**200 OK:** Single user returned successfully  
 ``` HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -82,7 +82,7 @@ Response file saved.
 Response code: 200; Time: 18ms (18 ms); Content length: 40 bytes (40 B)
 ```
 
-**404 Not Found:** User with given ID not found.
+**404 Not Found:** User with given ID not found.  
 ```HTTP/1.1 404 
 Content-Length: 0
 Date: Sat, 25 May 2024 15:51:41 GMT
@@ -92,13 +92,13 @@ Date: Sat, 25 May 2024 15:51:41 GMT
 Response code: 404; Time: 115ms (115 ms); Content length: 0 bytes (0 B)
 ```
 ---
-**Creating new user**
-HTTP Method: `POST`
-Endpoint: `/api/users`
-Result: Adds new user in the database
-Responses:
-**200 OK:** Successfully added a new user
-```HTTP/1.1 200 
+**Creating new user**  
+HTTP Method: `POST`  
+Endpoint: `/api/users`  
+Result: Adds new user in the database  
+Responses:  
+**200 OK:** Successfully added a new user  
+```HTTP/1.1 200
 Content-Type: application/json
 Transfer-Encoding: chunked
 Date: Sat, 25 May 2024 15:57:41 GMT
@@ -114,7 +114,7 @@ Response file saved.
 Response code: 200; Time: 46ms (46 ms); Content length: 38 bytes (38 B)
 ```
 
-**400 Bad Request:** Failed to add user, name or surname exceeds 20 characters
+**400 Bad Request:** Failed to add user, name or surname exceeds 20 characters  
 ```HTTP/1.1 400 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -135,16 +135,16 @@ Response file saved.
 Response code: 400; Time: 19ms (19 ms); Content length: 5082 bytes (5.08 kB)
 ```
 ---
-**Updating an existing user**
-HTTP Method: `PUT`
-Endpoint: `/api/users/{id}`
-Result: Updates an existing user in the database
-Path Parameters:
+**Updating an existing user**  
+HTTP Method: `PUT`  
+Endpoint: `/api/users/{id}`  
+Result: Updates an existing user in the database  
+Path Parameters:  
 
--   `id` (long): User ID
+-   `id` (long): User ID  
 
-Responses:
-**200 OK:** Successfully updated an existing user
+Responses:  
+**200 OK:** Successfully updated an existing user  
 ```HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -181,16 +181,16 @@ Response file saved.
 Response code: 400; Time: 21ms (21 ms); Content length: 5098 bytes (5.1 kB)
 ```
 ---
-**Delete an existing user**
-HTTP Method: `DELETE`
-Endpoint: `/api/users/{id}`
-Result: Deletes an existing user in the database
-Path Parameters:
+**Delete an existing user**  
+HTTP Method: `DELETE`  
+Endpoint: `/api/users/{id}`  
+Result: Deletes an existing user in the database  
+Path Parameters:  
 
--   `id` (long): User ID
+-   `id` (long): User ID  
 
-Responses:
-**204 OK:** Successfully deleted an existing user, no content to return
+Responses:  
+**204 OK:** Successfully deleted an existing user, no content to return  
 ```HTTP/1.1 204 
 Date: Sat, 25 May 2024 16:22:10 GMT
 
@@ -198,7 +198,7 @@ Date: Sat, 25 May 2024 16:22:10 GMT
 
 Response code: 204; Time: 16ms (16 ms); Content length: 0 bytes (0 B)
 ```
-**500 Internal Server Error:** Cannot delete if user has a comment (integrity constraint violation)
+**500 Internal Server Error:** Cannot delete if user has a comment (integrity constraint violation)  
 ```HTTP/1.1 500 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -219,13 +219,13 @@ Response file saved.
 Response code: 500; Time: 7ms (7 ms); Content length: 13065 bytes (13.06 kB)
 ```
 ---
-### 2. Managing Feedback
+### 2. Managing Feedback  
 **View all feedback**  
 HTTP Method: `GET`  
 Endpoint: `/api/feedbacks`  
 Result: Retrieves all feedback in the database  
 Responses:  
-**200 OK:** List of feedbacks returned successfully.
+**200 OK:** List of feedbacks returned successfully.  
 ```HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -294,15 +294,15 @@ Response file saved.
 Response code: 200; Time: 193ms (193 ms); Content length: 592 bytes (592 B)
 ```
 ---
-**View a single feedback**
-HTTP Method: `GET`
-Endpoint: `/api/feedbacks/{id}`
-Result: Retrieve a single feedback by its ID.
-Path Parameters:
--   `id` (long): Feedback ID
+**View a single feedback**  
+HTTP Method: `GET`  
+Endpoint: `/api/feedbacks/{id}`  
+Result: Retrieve a single feedback by its ID.  
+Path Parameters:  
+-   `id` (long): Feedback ID  
 
-Responses:
-**200 OK:** Single feedback returned successfully.
+Responses:  
+**200 OK:** Single feedback returned successfully.  
 ```HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -324,7 +324,7 @@ Response file saved.
 
 Response code: 200; Time: 16ms (16 ms); Content length: 121 bytes (121 B)
 ```
-**404 Not Found:** Feedback with given ID not found.
+**404 Not Found:** Feedback with given ID not found.  
 ```HTTP/1.1 404 
 Content-Length: 0
 Date: Sat, 25 May 2024 17:10:25 GMT
@@ -334,12 +334,12 @@ Date: Sat, 25 May 2024 17:10:25 GMT
 Response code: 404; Time: 5ms (5 ms); Content length: 0 bytes (0 B)
 ```
 ---
-**Creating new feedback**
-HTTP Method: `POST`
-Endpoint: `/api/feedbacks`
-Result: Adds new feedback in the database
-Responses:
-**200 OK:** Successfully added new feedback.
+**Creating new feedback**  
+HTTP Method: `POST`  
+Endpoint: `/api/feedbacks`  
+Result: Adds new feedback in the database  
+Responses:  
+**200 OK:** Successfully added new feedback.  
 ```HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -362,7 +362,7 @@ Response file saved.
 Response code: 200; Time: 47ms (47 ms); Content length: 120 bytes (120 B)
 ```
 
-**400 Bad Request**: Given rating is not in range 1-10
+**400 Bad Request**: Given rating is not in range 1-10  
 ```HTTP/1.1 400 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -383,16 +383,16 @@ Response file saved.
 Response code: 400; Time: 19ms (19 ms); Content length: 5120 bytes (5.12 kB)
 ```
 ---
-**Updating existing feedback**
-HTTP Method: `PUT`
-Endpoint: `/api/feedbacks/{id}`
-Result: Updates the existing rating and description of the title
-Path Parameters:
+**Updating existing feedback**  
+HTTP Method: `PUT`  
+Endpoint: `/api/feedbacks/{id}`  
+Result: Updates the existing rating and description of the title  
+Path Parameters:  
 
--   `id` (long): Feedback ID
+-   `id` (long): Feedback ID  
 
-Responses:
-**200 OK:** Successfully updated the existing rating and description.
+Responses:  
+**200 OK:** Successfully updated the existing rating and description.  
 ```HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -414,8 +414,8 @@ Response file saved.
 
 Response code: 200; Time: 6ms (6 ms); Content length: 119 bytes (119 B)
 ```
-<sup>(Note: I would never rate Mario 1/10)</sup>
-**400 Bad Request:** Failed to update feedback, rating not in range of 1-10
+<sup>(Note: I would never rate Mario 1/10)</sup>  
+**400 Bad Request:** Failed to update feedback, rating not in range of 1-10  
 ```HTTP/1.1 400 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -436,7 +436,7 @@ Response file saved.
 Response code: 400; Time: 624ms (624 ms); Content length: 5151 bytes (5.15 kB)
 ```
 
-**404 Not Found:** Feedback with given ID not found.
+**404 Not Found:** Feedback with given ID not found.  
 ```HTTP/1.1 404 
 Content-Length: 0
 Date: Sat, 25 May 2024 17:22:53 GMT
@@ -449,15 +449,15 @@ Response code: 404; Time: 5ms (5 ms); Content length: 0 bytes (0 B)
 
 
 ---
-**Delete existing feedback**
-HTTP Method: `DELETE`
-Endpoint: `/api/feedbacks/{id}`
-Result: Deletes existing feedback in the database
-Path Parameters:
--   `id` (long): Feedback ID
+**Delete existing feedback**  
+HTTP Method: `DELETE`  
+Endpoint: `/api/feedbacks/{id}`  
+Result: Deletes existing feedback in the database  
+Path Parameters:  
+-   `id` (long): Feedback ID  
 
-Responses:
-**200 OK:** Successfully deleted the feedback.
+Responses:  
+**200 OK:** Successfully deleted the feedback.  
 ```HTTP/1.1 200 
 Content-Length: 0
 Date: Sat, 25 May 2024 17:26:20 GMT
@@ -466,7 +466,7 @@ Date: Sat, 25 May 2024 17:26:20 GMT
 
 Response code: 200; Time: 30ms (30 ms); Content length: 0 bytes (0 B)
 ```
-**500 Internal Server Error:** Cannot delete if the feedback has a user (integrity constraint violation)
+**500 Internal Server Error:** Cannot delete if the feedback has a user (integrity constraint violation)  
 ```HTTP/1.1 500 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -487,13 +487,13 @@ Response file saved.
 Response code: 500; Time: 155ms (155 ms); Content length: 13669 bytes (13.67 kB)
 ```
 ---
-### 3. Managing Comments
-**View all comments**
-HTTP Method: `GET`
-Endpoint: `/api/comments`
-Result: Retrieves all comments in the database
-Responses:
-**200 OK:** List of comments returned successfully.
+### 3. Managing Comments  
+**View all comments**  
+HTTP Method: `GET`  
+Endpoint: `/api/comments`  
+Result: Retrieves all comments in the database  
+Responses:  
+**200 OK:** List of comments returned successfully.  
 ```HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -571,9 +571,9 @@ Response code: 200; Time: 227ms (227 ms); Content length: 629 bytes (629 B)
 HTTP Method: `GET`  
 Endpoint: `/api/comments/{id}`  
 Result: Retrieve a single comment by its ID.  
-Path Parameters:
+Path Parameters:  
 
--   `id` (long): Comment ID
+-   `id` (long): Comment ID  
 
 Responses:  
 **200 OK:** Single comment returned successfully.
@@ -607,7 +607,7 @@ Response file saved.
 
 Response code: 200; Time: 16ms (16 ms); Content length: 210 bytes (210 B)
 ```
-**404 Not Found:** Comment with given ID not found.
+**404 Not Found:** Comment with given ID not found.  
 ```HTTP/1.1 404 
 Content-Length: 0
 Date: Sat, 25 May 2024 17:50:34 GMT
@@ -622,7 +622,7 @@ HTTP Method: `POST`
 Endpoint: `/api/comment`  
 Result: Adds new comment in the database  
 Responses:  
-**200 OK:** Successfully added a new comment
+**200 OK:** Successfully added a new comment  
 ```HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -653,7 +653,7 @@ Response file saved.
 
 Response code: 200; Time: 210ms (210 ms); Content length: 207 bytes (207 B)
 ```
-**404 Not Found:** Feedback with given ID not found, cannot create comment.
+**404 Not Found:** Feedback with given ID not found, cannot create comment.  
 ```HTTP/1.1 400 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -677,12 +677,12 @@ Response code: 400; Time: 18ms (18 ms); Content length: 5122 bytes (5.12 kB)
 **Updating an existing comment**  
 HTTP Method: `PUT`  
 Endpoint: `/api/comments/{id}`  
-Result: Updates an existing comment in the database  
-Path Parameters:
--   `id` (long): Comment ID
+Result: Updates an existing comment in the database    
+Path Parameters:  
+-   `id` (long): Comment ID  
 
 Responses:  
-**200 OK:** Successfully updated an existing comment
+**200 OK:** Successfully updated an existing comment  
 ```HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -713,7 +713,7 @@ Response file saved.
 
 Response code: 200; Time: 170ms (170 ms); Content length: 211 bytes (211 B)
 ```
-**404 Not Found:** Comment with given ID not found.
+**404 Not Found:** Comment with given ID not found.  
 ```HTTP/1.1 400 
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -734,15 +734,15 @@ Response file saved.
 Response code: 400; Time: 21ms (21 ms); Content length: 5119 bytes (5.12 kB)
 ```
 ---
-**Delete an existing comment**
-HTTP Method: `DELETE`
-Endpoint: `/api/comments/{id}`
-Result: Deletes an existing comment in the database
-Path Parameters:
--   `id` (long): Comment ID
+**Delete an existing comment**  
+HTTP Method: `DELETE`  
+Endpoint: `/api/comments/{id}`  
+Result: Deletes an existing comment in the database  
+Path Parameters:  
+-   `id` (long): Comment ID  
 
-Responses:
-**200 OK:** Successfully deleted the comment.
+Responses:  
+**200 OK:** Successfully deleted the comment.  
 ```HTTP/1.1 200 
 Content-Length: 0
 Date: Sat, 25 May 2024 17:57:27 GMT
@@ -751,7 +751,7 @@ Date: Sat, 25 May 2024 17:57:27 GMT
 
 Response code: 200; Time: 11ms (11 ms); Content length: 0 bytes (0 B)
 ```
-**404 Not Found:** Comment with given ID not found.
+**404 Not Found:** Comment with given ID not found.  
 ```HTTP/1.1 404 
 Content-Length: 0
 Date: Sat, 25 May 2024 17:58:57 GMT
