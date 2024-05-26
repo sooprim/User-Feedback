@@ -11,9 +11,9 @@ This API was designed to let users openly present their opinion about media they
 The `Feedback` and the `Comments` can have different `Users`, since this is different data. For example, a user with `id: 1` gives "Mario" (a `title` from `feedbacks` table) a `rating` of 10/10, and user with `id: 2` writes some `text` saying "this is a great movie". This also allows for the movie to have controversial opinions, as one user might give it a high `rating` through `feedback`, and another user might criticize it though `text` in a `comment`.
 
 ## Base URL
-For users: `http://localhost:5618/api/users`
-For feedback: `http://localhost:5618/api/feedbacks`
-For comments: `http://localhost:5618/api/comments`
+For users: `http://localhost:5618/api/users`  
+For feedback: `http://localhost:5618/api/feedbacks`  
+For comments: `http://localhost:5618/api/comments`  
 
 ## Endpoints
 ### 1. Managing Users
