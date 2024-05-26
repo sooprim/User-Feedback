@@ -1,0 +1,37 @@
+# Feedback endpoints
+
+### Get all feedbacks
+GET https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/feedbacks
+
+### Get feedback by ID
+GET https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/feedbacks/1
+
+### Create a new feedback
+POST https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/feedbacks
+Content-Type: application/json
+
+{
+  "title": "New title",
+  "description": "New description",
+  "user": {
+    "id": 1
+  },
+  "rating": 5
+}
+
+### Update an existing feedback
+PUT https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/feedbacks/1
+Content-Type: application/json
+
+{
+  "description": "Updated description",
+  "rating": 11,
+  "user": {
+    "id": 1,
+    "name": "Jovan",
+    "surname": "Tone"
+  }
+}
+
+### Delete a feedback (only if user is null)
+DELETE https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/feedbacks/1

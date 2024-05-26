@@ -1,0 +1,29 @@
+# UserController Routes
+
+### Get all users
+GET https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/users
+
+### Get one user
+GET https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/users/1
+
+
+### Create a new user
+POST https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/users
+Content-Type: application/json
+
+{
+  "name": "New",
+  "surname": "User"
+}
+
+### Update an existing user
+PUT https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/users/2
+Content-Type: application/json
+
+{
+  "name": "Dejan",
+  "surname": "Mitov"
+}
+
+### Delete a user (can't delete if they have a comment)
+DELETE https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/users/1

@@ -1,0 +1,30 @@
+### Get all comments
+GET https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/comments
+
+### Get comment by ID
+GET https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/comments/1
+
+### Create Comment
+POST https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/comments/10
+Content-Type: application/json
+
+{
+    "text": "batman very cool",
+    "user": {
+      "id": 2
+    },
+    "feedback": {
+      "id": 4
+    }
+}
+
+### Update an existing comment
+PUT https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/comments/10
+Content-Type: application/json
+
+{
+  "text": "Updated text"
+}
+
+### Delete a comment
+DELETE https://user-feedback-api-20240526.lemondesert-3f30c2af.eastus.azurecontainerapps.io/api/comments/10
